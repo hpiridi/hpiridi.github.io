@@ -2,31 +2,26 @@
 layout: about
 title: about
 permalink: /
-subtitle: Director, Data Science @ <a href='https://www.walmart.com'>Walmart GlobalTech</a> | Research Scholar @ <a href='https://www.bits-pilani.ac.in/'>BITS Pilani</a>
+subtitle: Director, Data Science @ <a href='https://tech.walmart.com/content/walmart-global-tech/en_us.html'>Walmart GlobalTech</a> | Research Scholar @ <a href='https://www.bits-pilani.ac.in/'>BITS Pilani</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  more_info: >
-    <p>Hyderabad, India</p>
+  more_info: ""
 
 selected_papers: true
 social: true
 
 announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
+  enabled: false
 
 latest_posts:
-  enabled: true
-  scrollable: true
-  limit: 3
+  enabled: false
 ---
 
-Hari Prasad Piridi is a Director of Data Science at Walmart GlobalTech, where he leads the Applied AI Team building large-scale machine learning systems for catalog, search, personalization, and user-generated content. He brings ~20 years of industry experience, including ~14 years at Microsoft India R&D as a Lead Data & Applied Scientist.
+I lead multiple teams in the Applied AI Data Science Team at Walmart, where we build AI systems that work at scale and advance the science behind them to tackle problems spanning catalog, search, personalization, and product understanding for hundreds of millions of customers.
 
-He is also a Ph.D. Research Scholar at BITS Pilani, Hyderabad, working on spatio-temporal graph representation learning using graph neural networks and large language models. His research interests include dynamic graph neural networks, LLMs & agentic frameworks, and recommender systems.
+Before Walmart, I spent 14 years at Microsoft India R&D, leading data science teams in Azure Cloud+AI Org. My work sits at the intersection of Applied AI and rigorous research.
 
-His recent work includes GenAI-powered review summarization (showcased at CES), visual attribute extraction, personalized badge selection using causal inference, and session-aware recommendations with graph neural networks. He has published in venues including Springer's Discover Data and the ACM Journal on Computing and Sustainable Societies, and holds 3 patents filed at Walmart.
+My research interests include Generative AI, Large Language Models, Graph Neural Networks, Recommender Systems, and Causal Inference.

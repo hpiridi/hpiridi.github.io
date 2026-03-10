@@ -89,7 +89,12 @@ layout: default
                   <td class="p-1 pl-2 font-weight-light">{{ cv.phone }}</td>
                 </tr>
               {% endif %}
-              {% if cv.address %}
+              {% if cv.location %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.location }}</td>
+                </tr>
+              {% elsif cv.address %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
                   <td class="p-1 pl-2 font-weight-light">
@@ -108,6 +113,30 @@ layout: default
                   </td>
                 </tr>
               {% endif %}
+              {% if cv.social_networks %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Profiles</b></td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% for profile in cv.social_networks %}
+                      {% if profile.network == 'GitHub' %}
+                        <a href="https://github.com/{{ profile.username }}" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-github"></i> GitHub</a>
+                      {% elsif profile.network == 'LinkedIn' %}
+                        <a href="https://linkedin.com/in/{{ profile.username }}" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                      {% elsif profile.network == 'ORCID' %}
+                        <a href="https://orcid.org/{{ profile.username }}" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-orcid"></i> {{ profile.username -}}
+                        </a>
+                      {% elsif profile.network == 'Google Scholar' %}
+                        <a href="https://scholar.google.com/citations?user={{ profile.username }}" target="_blank" rel="noopener noreferrer"
+                          ><i class="ai ai-google-scholar"></i> Google Scholar</a>
+                      {% endif %}
+                      {% unless forloop.last %}&nbsp;&nbsp;{% endunless %}
+                    {% endfor %}
+                  </td>
+                </tr>
+              {% endif %}
             </table>
           </div>
         {% endif %}
@@ -116,7 +145,7 @@ layout: default
         {% if cv.summary %}
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">Professional Summary</h3>
-            <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            <p style="text-align: justify">{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         {% endif %}
 

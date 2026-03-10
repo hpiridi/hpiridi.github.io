@@ -35,9 +35,16 @@ body.sticky-bottom-footer {
 
 // Profile
 .profile {
+  margin-left: 2.5rem;
+
   img {
     width: 100%;
+    transition: filter 0.3s ease;
   }
+}
+
+html[data-theme="dark"] .profile img {
+  filter: grayscale(100%);
 }
 
 // Content layout uses Bootstrap's grid system with responsive columns

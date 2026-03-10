@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: Courses, workshops, and mentoring.
-nav: true
+nav: false
 nav_order: 5
 ---
 

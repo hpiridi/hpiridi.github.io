@@ -2,27 +2,27 @@ cv:
   name: Hari Prasad Piridi
   label: Director, Data Science
   email: hariprasad.piridi@gmail.com
-  location: Hyderabad, India
+  location: Bangalore, India
   image: ""
   summary: >
-    Dynamic, innovative, and results-driven Director of Data Science with ~20 years of experience.
-    Currently leading the Applied AI Team at Walmart GlobalTech. Prior to Walmart, worked with
-    Microsoft India R&D for ~14 years. Research Scholar at BITS Pilani with expertise in
-    Generative AI, Large Language Models, Graph Neural Networks, and Recommender Systems.
+    Director of Data Science at Walmart GlobalTech and Ph.D. Research Scholar at BITS Pilani.
+    Leads the Applied AI Catalog team building ML systems for search, personalization, and
+    product intelligence at scale. Research focuses on Graph Neural Networks, LLMs, and
+    Recommender Systems.
 
   social_networks:
-    - network: GitHub
-      username: hpiridi
     - network: LinkedIn
       username: hpiridi
-    - network: ORCID
-      username: 0009-0000-6112-5809
+    - network: GitHub
+      username: hpiridi
+    - network: Google Scholar
+      username: FD5S_WQAAAAJ
 
   sections:
     Experience:
       - company: Walmart GlobalTech
         position: Director, Data Science
-        location: Hyderabad, India
+        location: Bangalore, India
         start_date: 2022
         end_date: present
         summary: Leading and building multiple data science teams in the Catalog - Applied AI Team.
@@ -30,17 +30,13 @@ cv:
           - Providing technical roadmap and leadership to a team of data scientists and engineers
           - Advising leadership team on AI Strategy, roadmap and enterprise-wide deployment
           - Work cross-functionally with Search, Personalization and UGC organizations to improve customer experience
-          - Led GenAI Review Summarization showcased at Consumer Electronics Show (CES)
-          - Led Visual Attribute Extraction enabling Similar Items, Complete the Look, and Smart Creatives
-          - Led Unified Badging Service for personalized badge selection and page-level badge optimization
-          - Led SCAR — Session and Category Aware Recommendation with Graph Neural Networks
 
       - company: Microsoft India R&D
         position: Lead Data & Applied Scientist
         location: India, USA, Singapore, Malaysia, Brunei
         start_date: 2008
         end_date: 2022
-        summary: Led multiple work streams across Cloud Supply Chain Planning and Data Science.
+        summary: Led multiple work streams across Cloud Supply Chain and Capacity Planning Data Science.
         highlights:
           - Led Automated Quota Management (AQM), Offer Restriction Effect (OFE) and Cloud Demand Forecasting in CSCP
           - Led, hired, managed and mentored a team of applied machine learning scientists and data engineers
@@ -68,18 +64,21 @@ cv:
 
     Education:
       - institution: Birla Institute of Technology and Science, Pilani
-        area: Spatio-Temporal Graph Representation Learning using GNNs and LLMs
+        area: Spatio-Temporal Graph Representation Learning using GNNs
         studyType: Ph.D.
+        label: Doctorate
+        ongoing: true
         location: Hyderabad, India
         start_date: ""
         end_date: 2026
         highlights:
-          - "Research: Dynamic Graph Neural Networks and Large Language Models"
+          - "Research: Spatio-Temporal Graph Neural Networks"
           - CSIS Responsible Technologies Research Group
 
       - institution: Birla Institute of Technology and Science, Pilani
         area: Data Science and Engineering
         studyType: M.Tech
+        label: Masters
         location: Hyderabad, India
         start_date: ""
         end_date: ""
@@ -89,6 +88,7 @@ cv:
       - institution: Acharya Nagarjuna University
         area: Computer Science Engineering
         studyType: B.Tech
+        label: Bachelors
         location: India
         start_date: 2001
         end_date: 2005
@@ -99,35 +99,41 @@ cv:
       - name: Machine Learning
         level: Expert
         icon: fa-solid fa-hashtag
-        keywords: "Generative AI, Large Language Models, Graph Neural Networks, Recommender Systems, Causal Inference"
+        keywords:
+          - Generative AI
+          - Large Language Models
+          - Graph Neural Networks
+          - Recommender Systems
+          - Causal Inference
 
       - name: Programming
         level: Expert
         icon: fa-solid fa-code
-        keywords: "Python, PySpark, PyTorch, PyTorch Geometric, SparkML, Scikit-Learn"
+        keywords:
+          - Python
+          - PySpark
+          - PyTorch
+          - PyTorch Geometric
+          - SparkML
+          - Scikit-Learn
 
       - name: Big Data & Cloud
         level: Expert
         icon: fa-solid fa-cloud
-        keywords: "Databricks, Spark Structured Streaming, Azure, GCP, CosmosDB, SQL Server"
+        keywords:
+          - Databricks
+          - Spark Structured Streaming
+          - Azure
+          - GCP
+          - CosmosDB
+          - SQL Server
 
       - name: Operationalization
         level: Advanced
         icon: fa-solid fa-server
-        keywords: "Docker, Kubernetes, MLOps, Azure DevOps, Azure ML Service"
-
-    Certifications:
-      - title: "Microsoft Certified: Azure Data Scientist Associate (DP-100)"
-        date: 2020
-        awarder: Microsoft
-        summary: ""
-
-      - title: "Microsoft Certified: Azure AI Engineer Associate (AI-100)"
-        date: 2019
-        awarder: Microsoft
-        summary: ""
-
-      - title: "Microsoft Certified: DevOps Engineer Expert (AZ-400)"
-        date: 2020
-        awarder: Microsoft
-        summary: ""
+        keywords:
+          - Docker
+          - Kubernetes
+          - MLOps
+          - Azure DevOps
+          - Azure ML Service

@@ -1,29 +1,68 @@
 - title: "Systems and Methods for Generating Aggregated Reviews"
-  number: "63/670645"
+  publication_number: "US20260017697A1"
+  application_number: "19/231,808"
+  patent_office: "US"
   status: pending
   date_filed: "2024"
+  date_published: "2026-01-15"
   date_granted: ""
   inventors:
     - Hari Prasad Piridi
-  abstract: "Systems and methods for generating aggregated reviews for e-commerce products."
-  link: ""
+    - Rahul Ghosh
+    - Himanshu Tanwar
+    - Anuranjan Kumar
+    - Sunil Rudresh
+    - Dhruv Sharma
+    - Girish Thiruvenkadam
+  abstract: "Systems and methods for generating aggregate reviews are disclosed. Generating aggregate reviews includes receiving review data associated with an item object in a database and selecting a subset of the review data based on a first selection criteria. The systems and methods further include generating a target keyword score for each respective target keyword based on a polarity of the target keywords, selecting a subset of the target keywords based on a predetermined range of the target keyword scores, generating one or more target keyword summaries for each respective target keyword, generating an item object summary based on the one or more target keyword summaries, iteratively modifying the item object summary using a self-critique module, and generating a set of instructions to cause the item object summary to be displayed on a user interface."
+  link: "https://patents.google.com/patent/US20260017697A1/en"
 
 - title: "Systems and Methods for Automated Interface Element Generation and Presentation — Badge Selection Framework"
-  number: "63/668963"
+  publication_number: "US20260017072A1"
+  application_number: "19/228,995"
+  patent_office: "US"
   status: pending
   date_filed: "2024"
+  date_published: "2026-01-15"
   date_granted: ""
   inventors:
+    - Sreejith Kallummil
+    - Sunil Rudresh
+    - Anuranjan Kumar
+    - Nayan Gupta
+    - Anwesha Bhowmik
+    - Pritam Prakash
+    - Nikul Atmaram Prajapati
+    - Girish Thiruvenkadam
+    - Suman Kumar
     - Hari Prasad Piridi
-  abstract: "Systems and methods for automated interface element generation and presentation using a badge selection framework."
-  link: ""
+    - Rahul Ghosh
+    - Kannan Achan
+    - Anurag Katiyar
+  abstract: "System and methods for generating user interface elements are disclosed. Generating user interface elements includes receiving a request for interface elements associated with at least one of one or more candidate items, generating a user affinity score for the candidate interface elements and generating a candidate item affinity score for the candidate items and the candidate interface elements. In response to the request for interface elements, generating a combined affinity score for each candidate item, generating a plurality of interface elements for the candidate items, ranking the plurality of interface elements based on the combined affinity score for the interface elements and the candidate items, selecting a subset of the plurality of interface elements for the candidate items, and generating a set of instructions to cause the subset of the interface elements to be displayed in conjunction with the corresponding candidate items."
+  link: "https://patents.google.com/patent/US20260017072A1/en"
 
 - title: "Systems and Methods for Automated Interface Element Generation and Presentation — Badge Optimization Framework"
-  number: "63/668980"
+  publication_number: "US20260017844A1"
+  application_number: "19/229,014"
+  patent_office: "US"
   status: pending
   date_filed: "2024"
+  date_published: "2026-01-15"
   date_granted: ""
   inventors:
+    - Sreejith Kallummil
+    - Sunil Rudresh
+    - Anuranjan Kumar
+    - Nayan Gupta
+    - Anwesha Bhowmik
+    - Pritam Prakash
+    - Nikul Atmaram Prajapati
+    - Girish Thiruvenkadam
+    - Suman Kumar
     - Hari Prasad Piridi
-  abstract: "Systems and methods for automated interface element generation and presentation using a badge optimization framework."
-  link: ""
+    - Rahul Ghosh
+    - Kannan Achan
+    - Anurag Katiyar
+  abstract: "System and methods for generating user interface elements are disclosed. Generating user interface elements includes receiving a request for a user interface including one or more candidate items, selecting a set of interface elements for display in conjunction with at least one of the one or more candidate items, obtaining a quantity of available interface element locations based on a quantity of the one or more candidate items, selecting a subset of interface elements from the set of interface elements based on a first selection criteria, and generating a set of instructions to cause a device to generate a user interface including the subset of interface elements displayed in conjunction with a corresponding one of the one or more candidate items."
+  link: "https://patents.google.com/patent/US20260017844A1/en"
