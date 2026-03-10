@@ -103,24 +103,8 @@ related_blog_posts:
   enabled: true
   max_related: 5
 
-# Giscus comments (RECOMMENDED)
-# Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
-giscus:
-  repo: hpiridi/hpiridi.github.io
-  repo_id: # TODO: get from https://giscus.app/
-  category: Announcements
-  category_id: # TODO: get from https://giscus.app/
-  mapping: pathname
-  strict: 0
-  reactions_enabled: 1
-  input_position: bottom
-  dark_theme: preferred_color_scheme
-  light_theme: preferred_color_scheme
-  emit_metadata: 0
-  lang: en
-
-# Disqus comments (DEPRECATED)
-disqus_shortname: # put your disqus shortname
+# Disqus comments
+disqus_shortname: # TODO: add your Disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
