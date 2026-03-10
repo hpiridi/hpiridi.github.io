@@ -103,9 +103,21 @@ related_blog_posts:
   enabled: true
   max_related: 5
 
-# Disqus comments
-disqus_shortname: # TODO: add your Disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+# Giscus comments
+# Follow instructions on https://giscus.app/ to setup for your repo.
+giscus:
+  repo: hpiridi/hpiridi.github.io
+  repo_id: # TODO: get from https://giscus.app/
+  category: Announcements
+  category_id: # TODO: get from https://giscus.app/
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  input_position: bottom
+  dark_theme: preferred_color_scheme
+  light_theme: preferred_color_scheme
+  emit_metadata: 0
+  lang: en
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
