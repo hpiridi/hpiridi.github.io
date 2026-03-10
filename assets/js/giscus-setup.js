@@ -5,11 +5,11 @@ function determineGiscusTheme() {
       document.documentElement.getAttribute("data-theme") ||
       "system";
 
-    if (theme === "dark") return "dark";
-    if (theme === "light") return "light";
+    if (theme === "dark") return "preferred_color_scheme";
+    if (theme === "light") return "preferred_color_scheme";
 
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDark ? "dark" : "light";
+    return prefersDark ? "preferred_color_scheme" : "preferred_color_scheme";
   
 }
 
@@ -18,12 +18,12 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "alshedivat/al-folio",
+    "data-repo": "hpiridi/hpiridi.github.io",
     "data-repo-id": "",
-    "data-category": "Comments",
+    "data-category": "Announcements",
     "data-category-id": "",
-    "data-mapping": "title",
-    "data-strict": "1",
+    "data-mapping": "pathname",
+    "data-strict": "0",
     "data-reactions-enabled": "1",
     "data-emit-metadata": "0",
     "data-input-position": "bottom",
