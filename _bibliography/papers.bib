@@ -26,14 +26,16 @@
   html      = {https://link.springer.com/article/10.1007/s44248-025-00094-8}
 }
 
-@inproceedings{piridi2024scar,
-  title     = {SCAR: Session and Category Aware Recommendation with Graph Neural Networks at Walmart},
-  author    = {Piridi, Hari Prasad},
-  booktitle = {Applied Soft Computing Journal},
+@unpublished{krishnamurthy2024scar,
+  title     = {Session and Category Aware Recommendation with Graph Neural Networks},
+  author    = {Krishnamurthy, Sanjay and Piridi, Hari Prasad and Pervin, Nargis and Thiruvenkadam, Girish and Ghosh, Rahul},
   year      = {2024},
+  note      = {SSRN Preprint},
+  doi       = {10.2139/ssrn.4789174},
   selected  = {true},
-  abstract  = {Session and category aware next purchase recommendation using graph neural networks for e-commerce at Walmart.},
-  html      = {https://dx.doi.org/10.2139/ssrn.4789174}
+  abstract  = {For e-commerce platforms like Walmart.com, recommendation systems are vital in enhancing user experience by accurately predicting and presenting products that align with customer preferences. Traditional Session Aware Recommenders (SAR) utilize historical interactions such as clicks, cart additions, and purchases to predict users' upcoming interactions. However, a significant limitation of these systems is their inability to inherently predict the next item a user may wish to purchase. This predictive capability is essential for e-commerce platforms striving to maintain customer engagement, particularly through the use of periodic recommendation emails. Furthermore, while modeling purchasing preferences based on the historical session data can provide insights into user interests, it faces challenges due to the often limited variation in user intent across consecutive interactions. To address these challenges, we introduce the Session and Category Aware Sequential Recommender (SCAR), featuring a novel two-tower deep learning architecture designed to predict future purchases. The first tower, uses a Graph Neural Network (GNN) to process sequences of purchased items, including their categories and the time elapsed between purchases. This approach effectively differentiates the purchases from the session interactions, by capturing long-term purchase preferences and integrating broader category-based preferences. The second tower uses another GNN to analyze a fixed length of prior sessions and different types of user interactions, focusing on short-term behaviors. This is particularly significant, as our technique can better distinguish between interaction types, resulting in a better understanding of user preferences. The outputs of both towers are integrated using a gating network that allows the model to effectively weigh the long-term preferences against the short-term behaviors to predict the next item likely to be purchased. Comprehensive experiments with Walmart data show that SCAR consistently surpasses several recent benchmarks showing performance improvements of up to 20.74% in the Hit rate at top 10 (Hit@10) and 3.34% in Mean Reciprocal Rank (MRR@10). This highlights SCAR's ability to effectively capture users' sequential behaviors and temporal dynamics simultaneously, thereby enhancing the accuracy of predictions in e-commerce recommendation systems.},
+  keywords  = {Recommender Systems, Session Aware Recommendation, Graph Neural Networks, Sequential Next Purchase Prediction, User-item Interaction Modeling},
+  html      = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4789174}
 }
 
 @article{ladhar2023farmercollectives,
@@ -47,6 +49,6 @@
   publisher = {ACM},
   doi       = {10.1145/3609262},
   selected  = {true},
-  abstract  = {Small and marginal farmers are unable to get a good price for their produce because they face several challenges in market participation. This paper presents AI-based market intelligence systems designed to support farmer collectives in India in making better decisions about when and where to sell their agricultural produce.},
+  abstract  = {Small and marginal farmers are unable to get a good price for their produce, because they face several challenges in market participation. Aggregation of produce via farmer cooperatives and the ability to delay sales (for non-perishable crops) to when market prices are high has emerged as a useful strategy to improve farmer incomes. We work with a network of farmer cooperatives in India growing soyabean and explore the potential of developing a machine learning–based price forecasting and sales recommendation system that produces suggestions on the best dates when harvested soyabean crops should be sold, e.g., whether to sell right away (if prices are likely to fall in the future) or to wait (if prices are likely to rise). We present an evaluation of different methods for price forecasting and a prospect theory–based method to produce sales recommendations. Experiments on historical data indicate that we can provide modest gains to farmers, and we build and field test an Android application for this purpose. Early results indicate positive feedback. Our methods can be generalized to other agricultural commodities that can be stored for several months and help farmer cooperatives to compete effectively in agricultural markets.},
   html      = {https://dl.acm.org/doi/10.1145/3609262}
 }
