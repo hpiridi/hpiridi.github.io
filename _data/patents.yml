@@ -1,0 +1,20 @@
+- title: "Sample Patent Title — Replace with Your Patent"
+  number: "US-XX,XXX,XXX"
+  status: granted
+  date_filed: 2023-01-15
+  date_granted: 2025-06-15
+  inventors:
+    - Hari Prasad Piridi
+    - Co-Inventor Name
+  abstract: "Replace with patent abstract. A system and method for..."
+  link: "https://patents.google.com/patent/USXXXXXXXX"
+
+- title: "Another Sample Patent — Replace with Your Patent"
+  number: "US-XXXX/XXXXXXX"
+  status: pending
+  date_filed: 2024-06-01
+  date_granted:
+  inventors:
+    - Hari Prasad Piridi
+  abstract: "Replace with patent abstract."
+  link: ""
