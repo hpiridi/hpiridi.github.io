@@ -1,20 +1,29 @@
-- title: "Sample Patent Title — Replace with Your Patent"
-  number: "US-XX,XXX,XXX"
-  status: granted
-  date_filed: 2023-01-15
-  date_granted: 2025-06-15
-  inventors:
-    - Hari Prasad Piridi
-    - Co-Inventor Name
-  abstract: "Replace with patent abstract. A system and method for..."
-  link: "https://patents.google.com/patent/USXXXXXXXX"
-
-- title: "Another Sample Patent — Replace with Your Patent"
-  number: "US-XXXX/XXXXXXX"
+- title: "Systems and Methods for Generating Aggregated Reviews"
+  number: "63/670645"
   status: pending
-  date_filed: 2024-06-01
-  date_granted:
+  date_filed: "2024"
+  date_granted: ""
   inventors:
     - Hari Prasad Piridi
-  abstract: "Replace with patent abstract."
+  abstract: "Systems and methods for generating aggregated reviews for e-commerce products."
+  link: ""
+
+- title: "Systems and Methods for Automated Interface Element Generation and Presentation — Badge Selection Framework"
+  number: "63/668963"
+  status: pending
+  date_filed: "2024"
+  date_granted: ""
+  inventors:
+    - Hari Prasad Piridi
+  abstract: "Systems and methods for automated interface element generation and presentation using a badge selection framework."
+  link: ""
+
+- title: "Systems and Methods for Automated Interface Element Generation and Presentation — Badge Optimization Framework"
+  number: "63/668980"
+  status: pending
+  date_filed: "2024"
+  date_granted: ""
+  inventors:
+    - Hari Prasad Piridi
+  abstract: "Systems and methods for automated interface element generation and presentation using a badge optimization framework."
   link: ""

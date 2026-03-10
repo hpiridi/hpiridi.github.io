@@ -1,57 +1,133 @@
 cv:
   name: Hari Prasad Piridi
   label: Director, Data Science
-  email: PLACEHOLDER@email.com
-  location: Bentonville, AR
+  email: hariprasad.piridi@gmail.com
+  location: Hyderabad, India
   image: ""
-  summary: Director of Data Science at Walmart and active Research Scholar with publications and patents in applied ML.
+  summary: >
+    Dynamic, innovative, and results-driven Director of Data Science with ~20 years of experience.
+    Currently leading the Applied AI Team at Walmart GlobalTech. Prior to Walmart, worked with
+    Microsoft India R&D for ~14 years. Research Scholar at BITS Pilani with expertise in
+    Generative AI, Large Language Models, Graph Neural Networks, and Recommender Systems.
 
   social_networks:
     - network: GitHub
       username: hpiridi
     - network: LinkedIn
-      username: PLACEHOLDER
+      username: hpiridi
+    - network: ORCID
+      username: 0009-0000-6112-5809
 
   sections:
     Experience:
-      - company: Walmart
+      - company: Walmart GlobalTech
         position: Director, Data Science
-        location: Bentonville, AR
-        start_date: YYYY
+        location: Hyderabad, India
+        start_date: 2022
         end_date: present
-        summary: Leading data science teams building large-scale ML systems.
+        summary: Leading and building multiple data science teams in the Catalog - Applied AI Team.
         highlights:
-          - Replace with your actual experience highlights
-          - Describe key projects and impact
+          - Providing technical roadmap and leadership to a team of data scientists and engineers
+          - Advising leadership team on AI Strategy, roadmap and enterprise-wide deployment
+          - Work cross-functionally with Search, Personalization and UGC organizations to improve customer experience
+          - Led GenAI Review Summarization showcased at Consumer Electronics Show (CES)
+          - Led Visual Attribute Extraction enabling Similar Items, Complete the Look, and Smart Creatives
+          - Led Unified Badging Service for personalized badge selection and page-level badge optimization
+          - Led SCAR — Session and Category Aware Recommendation with Graph Neural Networks
+
+      - company: Microsoft India R&D
+        position: Lead Data & Applied Scientist
+        location: India, USA, Singapore, Malaysia, Brunei
+        start_date: 2008
+        end_date: 2022
+        summary: Led multiple work streams across Cloud Supply Chain Planning and Data Science.
+        highlights:
+          - Led Automated Quota Management (AQM), Offer Restriction Effect (OFE) and Cloud Demand Forecasting in CSCP
+          - Led, hired, managed and mentored a team of applied machine learning scientists and data engineers
+          - Set direction and vision for Data Science team to solve key data-led business problems
+          - Designed and architected solutions using Big Data and Data Science stack
+          - Collaborated cross-functionally with Microsoft Research and Microsoft Partner organizations
+
+      - company: Merrill Lynch
+        position: Consultant
+        location: India
+        start_date: 2007
+        end_date: 2008
+        summary: ""
+        highlights:
+          - Development of .NET based web applications
+
+      - company: Infosys Technologies
+        position: Software Engineer
+        location: India
+        start_date: 2005
+        end_date: 2007
+        summary: ""
+        highlights:
+          - Development of Java based web applications
 
     Education:
-      - institution: "Your University"
-        area: "Your Field"
-        studyType: "PhD/MS/BS"
-        location: "City, State"
-        start_date: YYYY
-        end_date: YYYY
+      - institution: Birla Institute of Technology and Science, Pilani
+        area: Spatio-Temporal Graph Representation Learning using GNNs and LLMs
+        studyType: Ph.D.
+        location: Hyderabad, India
+        start_date: ""
+        end_date: 2026
         highlights:
-          - Replace with your education details
+          - "Research: Dynamic Graph Neural Networks and Large Language Models"
+          - CSIS Responsible Technologies Research Group
+
+      - institution: Birla Institute of Technology and Science, Pilani
+        area: Data Science and Engineering
+        studyType: M.Tech
+        location: Hyderabad, India
+        start_date: ""
+        end_date: ""
+        highlights:
+          - "CGPA: 9.73"
+
+      - institution: Acharya Nagarjuna University
+        area: Computer Science Engineering
+        studyType: B.Tech
+        location: India
+        start_date: 2001
+        end_date: 2005
+        highlights:
+          - First Class
 
     Skills:
       - name: Machine Learning
         level: Expert
         icon: fa-solid fa-hashtag
-        keywords: "Deep Learning, NLP, Recommender Systems, Time Series, Graph Neural Networks"
+        keywords: "Generative AI, Large Language Models, Graph Neural Networks, Recommender Systems, Causal Inference"
 
       - name: Programming
         level: Expert
         icon: fa-solid fa-code
-        keywords: "Python, SQL, Spark, TensorFlow, PyTorch"
+        keywords: "Python, PySpark, PyTorch, PyTorch Geometric, SparkML, Scikit-Learn"
 
-      - name: Infrastructure
+      - name: Big Data & Cloud
+        level: Expert
+        icon: fa-solid fa-cloud
+        keywords: "Databricks, Spark Structured Streaming, Azure, GCP, CosmosDB, SQL Server"
+
+      - name: Operationalization
         level: Advanced
         icon: fa-solid fa-server
-        keywords: "Kubernetes, Airflow, MLflow, Cloud (GCP/Azure)"
+        keywords: "Docker, Kubernetes, MLOps, Azure DevOps, Azure ML Service"
 
-    Awards:
-      - title: "Replace with Your Award"
-        date: YYYY
-        awarder: "Organization"
-        summary: "Description of the award"
+    Certifications:
+      - title: "Microsoft Certified: Azure Data Scientist Associate (DP-100)"
+        date: 2020
+        awarder: Microsoft
+        summary: ""
+
+      - title: "Microsoft Certified: Azure AI Engineer Associate (AI-100)"
+        date: 2019
+        awarder: Microsoft
+        summary: ""
+
+      - title: "Microsoft Certified: DevOps Engineer Expert (AZ-400)"
+        date: 2020
+        awarder: Microsoft
+        summary: ""

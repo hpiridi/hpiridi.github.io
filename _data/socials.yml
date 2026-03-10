@@ -1,11 +1,11 @@
-# Social media links — update PLACEHOLDER values with your actual IDs
-email: PLACEHOLDER@email.com
+# Social media links
+email: hariprasad.piridi@gmail.com
 github_username: hpiridi
-linkedin_username: PLACEHOLDER
-x_username: PLACEHOLDER
-scholar_userid: PLACEHOLDER # your Google Scholar ID
-orcid_id: PLACEHOLDER # your ORCID ID (e.g., 0000-0000-0000-0000)
-research_gate_profile: PLACEHOLDER # your ResearchGate profile username
-semanticscholar_id: PLACEHOLDER # your Semantic Scholar author ID
+linkedin_username: hpiridi
+# x_username:  # TODO: add your X/Twitter handle if you have one
+# scholar_userid:  # TODO: add your Google Scholar ID
+orcid_id: 0009-0000-6112-5809
+# research_gate_profile:  # TODO: add your ResearchGate username
+# semanticscholar_id:  # TODO: add your Semantic Scholar ID
 cv_pdf: /assets/pdf/cv.pdf
 rss_icon: true
