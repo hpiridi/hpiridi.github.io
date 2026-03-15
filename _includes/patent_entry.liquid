@@ -17,19 +17,7 @@
         {{ patent.title }}
       {% endif %}
     </div>
-    <!-- Inventors -->
-    {% if patent.inventors %}
-      <div class="author">
-        {% for inventor in patent.inventors %}
-          {%- if inventor == "Hari Prasad Piridi" -%}
-            <em>{{ inventor }}</em>
-          {%- else -%}
-            {{ inventor }}
-          {%- endif -%}
-          {%- unless forloop.last -%}, {% endunless -%}
-        {% endfor %}
-      </div>
-    {% endif %}
+    <!-- Inventors (hidden) -->
     <!-- Patent metadata -->
     <div class="periodical">
       {% if patent.status == 'disclosure' -%}
