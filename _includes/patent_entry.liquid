@@ -32,17 +32,27 @@
     {% endif %}
     <!-- Patent metadata -->
     <div class="periodical">
-      {% if patent.patent_office -%}
-        {{ patent.patent_office }} Patent App.
-      {%- endif %}
-      {%- if patent.publication_number -%}
-        &nbsp;<span style="font-family: monospace;">{{ patent.publication_number }}</span>
-      {%- endif -%}
-      {%- if patent.application_number -%}
-        , App. No. <span style="font-family: monospace;">{{ patent.application_number }}</span>
-      {%- endif -%}
-      {%- if patent.date_filed -%}
-        , Filed {{ patent.date_filed }}
+      {% if patent.status == 'disclosure' -%}
+        {{ patent.patent_office }} Patent Disclosure
+        {%- if patent.disclosure_number -%}
+          &nbsp;#{{ patent.disclosure_number }}
+        {%- endif -%}
+        {%- if patent.date_filed -%}
+          , Filed {{ patent.date_filed }}
+        {%- endif -%}
+      {%- else -%}
+        {% if patent.patent_office -%}
+          {{ patent.patent_office }} Patent App.
+        {%- endif %}
+        {%- if patent.publication_number -%}
+          &nbsp;<span style="font-family: monospace;">{{ patent.publication_number }}</span>
+        {%- endif -%}
+        {%- if patent.application_number -%}
+          , App. No. <span style="font-family: monospace;">{{ patent.application_number }}</span>
+        {%- endif -%}
+        {%- if patent.date_filed -%}
+          , Filed {{ patent.date_filed }}
+        {%- endif -%}
       {%- endif -%}
       {%- if patent.date_published and patent.date_published != '' -%}
         , Published {{ patent.date_published }}

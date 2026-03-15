@@ -66,3 +66,81 @@
     - Anurag Katiyar
   abstract: "System and methods for generating user interface elements are disclosed. Generating user interface elements includes receiving a request for a user interface including one or more candidate items, selecting a set of interface elements for display in conjunction with at least one of the one or more candidate items, obtaining a quantity of available interface element locations based on a quantity of the one or more candidate items, selecting a subset of interface elements from the set of interface elements based on a first selection criteria, and generating a set of instructions to cause a device to generate a user interface including the subset of interface elements displayed in conjunction with a corresponding one of the one or more candidate items."
   link: "https://patents.google.com/patent/US20260017844A1/en"
+
+- title: "Multi-Modal, Multi-Stage System and Method for Automated Detection and Remediation of Egregious Variant Groups in Large-Scale E-Commerce Product Catalogs"
+  publication_number: ""
+  application_number: ""
+  patent_office: "US"
+  status: disclosure
+  date_filed: "2025"
+  date_published: ""
+  date_granted: ""
+  disclosure_number: "9526"
+  inventors:
+    - Balaji Vaidyanathan
+    - Shilpashree Rao
+    - Ayushi Jain
+    - Tuhin Bhattacharya
+    - Sachin Yadav
+    - Yiming Sun
+    - Aishwary Dale
+    - Hari Prasad Piridi
+    - Shwati Mohapatra
+    - Rahul Ghosh
+  abstract: ""
+  link: ""
+
+- title: "Multi-Tier, Multi-Modal System and Method for Mismatch Detection in Large-Scale E-Commerce Product Catalog"
+  publication_number: ""
+  application_number: ""
+  patent_office: "US"
+  status: disclosure
+  date_filed: "2025"
+  date_published: ""
+  date_granted: ""
+  disclosure_number: "9525"
+  inventors:
+    - Richa Sharma
+    - Omer Ovenc
+    - Akhilesh Kumar Gangwa
+    - RGV Raghavendra
+    - Anirudh Tripathi
+    - Athira Warrier
+    - Hari Prasad Piridi
+    - Rahul Ghosh
+    - Shwati Mohapatra
+  abstract: ""
+  link: ""
+
+- title: "Systems and Methods for Scalable, High Recall Duplicate Product Detection via Efficient Fusion Framework"
+  publication_number: ""
+  application_number: ""
+  patent_office: "US"
+  status: disclosure
+  date_filed: "2025"
+  date_published: ""
+  date_granted: ""
+  disclosure_number: "9524"
+  inventors:
+    - Abilash Amarthaluri
+    - Piyush Singh
+    - Venkata Srinivas Vemparala
+    - Shilpashree Rao
+    - Vishakha Gupta
+    - Sanjay V K
+    - Arya Babura
+    - Tuhin Bhattacharya
+    - Nitish Ranjan Sahoo
+    - Akash Agrawal
+    - Ankita Ankita
+    - Nixon Pulladan
+    - Balaji Vaidyanathan
+    - Mayank Jain
+    - Arindam Jain
+    - Sharmistha Maitra
+    - Pallavi Bhende
+    - Hari Prasad Piridi
+    - Rahul Ghosh
+    - Shwati Mohapatra
+  abstract: ""
+  link: ""

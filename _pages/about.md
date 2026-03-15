@@ -24,4 +24,4 @@ I am a Director of Data Science at Walmart GlobalTech, where I lead multiple tea
 
 Previously, I spent 14 years at Microsoft India R&D as a Lead Data & Applied Scientist in the Azure Cloud+AI Org, leading data science teams across Cloud Supply Chain and Capacity Planning. I led teams that built models for Automated Quota Management, Cloud Demand Forecasting, and Offer Restriction Effect estimation, collaborating cross-functionally with Microsoft Research.
 
-I hold an M.Tech in Data Science and Engineering from BITS Pilani and am currently a research scholar at BITS Pilani, researching Spatio-Temporal Graph Representation Learning using GNNs. I have published in reputed international journals and hold three pending US patents.
+I hold an M.Tech in Data Science and Engineering from BITS Pilani and am currently a research scholar at BITS Pilani, researching Spatio-Temporal Graph Representation Learning using GNNs. I have published research papers and journals in reputed conferences and international journals and also hold multiple US patents.
