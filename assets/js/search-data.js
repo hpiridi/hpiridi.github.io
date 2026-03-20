@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "",
+          description: "Career timeline, education, and technical skills.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
