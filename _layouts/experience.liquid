@@ -1,0 +1,351 @@
+---
+layout: default
+---
+
+{% assign cv = site.data.cv.cv %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ page.display_title | default: page.title }}
+      {% if page.cv_pdf %}
+        <a
+          {% if page.cv_pdf contains '://' %}
+            href="{{ page.cv_pdf }}"
+          {% else %}
+            href="{{ page.cv_pdf | relative_url }}"
+          {% endif %}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      {% endif %}
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    <div class="experience-page">
+
+      {% comment %} ─── Contact Information ─── {% endcomment %}
+      {% if cv.name or cv.label or cv.email or cv.location %}
+        <section class="experience-section">
+          <h2 class="experience-section-title">
+            <i class="fa-solid fa-address-card"></i> Contact Information
+          </h2>
+          <div class="contact-card">
+            {% if cv.name %}
+              <div class="contact-name">{{ cv.name }}</div>
+            {% endif %}
+            {% if cv.label %}
+              <div class="contact-label">{{ cv.label }}</div>
+            {% endif %}
+            <div class="contact-details">
+              {% if cv.email %}
+                <span class="contact-item">
+                  <i class="fa-solid fa-envelope"></i> {{ cv.email }}
+                </span>
+              {% endif %}
+              {% if cv.location %}
+                <span class="contact-item">
+                  <i class="fa-solid fa-location-dot"></i> {{ cv.location }}
+                </span>
+              {% endif %}
+              {% if cv.phone %}
+                <span class="contact-item">
+                  <i class="fa-solid fa-phone"></i> {{ cv.phone }}
+                </span>
+              {% endif %}
+              {% if cv.website %}
+                <span class="contact-item">
+                  <i class="fa-solid fa-globe"></i> <a href="{{ cv.website }}" target="_blank">{{ cv.website }}</a>
+                </span>
+              {% endif %}
+            </div>
+            {% if cv.social_networks %}
+              <div class="contact-socials">
+                {% for profile in cv.social_networks %}
+                  {% if profile.network == 'GitHub' %}
+                    <a href="https://github.com/{{ profile.username }}" target="_blank" rel="noopener noreferrer">
+                      <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                  {% elsif profile.network == 'LinkedIn' %}
+                    <a href="https://linkedin.com/in/{{ profile.username }}" target="_blank" rel="noopener noreferrer">
+                      <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                  {% elsif profile.network == 'ORCID' %}
+                    <a href="https://orcid.org/{{ profile.username }}" target="_blank" rel="noopener noreferrer">
+                      <i class="fa-brands fa-orcid"></i> ORCID
+                    </a>
+                  {% elsif profile.network == 'Google Scholar' %}
+                    <a href="https://scholar.google.com/citations?user={{ profile.username }}" target="_blank" rel="noopener noreferrer">
+                      <i class="ai ai-google-scholar"></i> Google Scholar
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% comment %} ─── Professional Summary ─── {% endcomment %}
+      {% if cv.summary %}
+        <section class="experience-section">
+          <h2 class="experience-section-title">
+            <i class="fa-solid fa-user"></i> Professional Summary
+          </h2>
+          <div class="summary-card">
+            {{ cv.summary | markdownify }}
+          </div>
+        </section>
+      {% endif %}
+
+      {% comment %} ─── Experience Section ─── {% endcomment %}
+      {% assign empty_array = '' | split: ',' %}
+      {% assign exp = cv.sections.Experience | default: empty_array %}
+      {% assign vol = cv.sections.Volunteer | default: empty_array %}
+      {% assign combined_experience = exp | concat: vol %}
+
+      {% if combined_experience.size > 0 %}
+        <section class="experience-section">
+          <h2 class="experience-section-title">
+            <i class="fa-solid fa-briefcase"></i> Experience
+          </h2>
+          <div class="timeline-container">
+            {% for entry in combined_experience %}
+              <div class="timeline-entry">
+                <div class="timeline-marker">
+                  <div class="marker-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                </div>
+                <div class="timeline-card">
+                  {% assign position_title = entry.position %}
+                  {% assign company_name = entry.company | default: entry.name | default: entry.organization %}
+
+                  <div class="timeline-card-header">
+                    {% if entry.logo %}
+                      <img class="timeline-card-logo" src="{{ entry.logo | relative_url }}" alt="{{ company_name }} logo">
+                    {% endif %}
+                    <div class="timeline-card-header-text">
+                      {% if position_title %}
+                        {% if entry.url %}
+                          <div class="timeline-card-title">
+                            <a href="{{ entry.url }}">{{ position_title }}</a>
+                          </div>
+                        {% else %}
+                          <div class="timeline-card-title">{{ position_title }}</div>
+                        {% endif %}
+                      {% endif %}
+                      {% if company_name %}
+                        <div class="timeline-card-subtitle">{{ company_name }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  <div class="timeline-card-meta">
+                    {% assign raw_start = entry.start_date | default: entry.startDate %}
+                    {% assign raw_end = entry.end_date | default: entry.endDate %}
+                    {% assign startDate = raw_start | split: '-' | first %}
+                    {% assign endDate = raw_end | split: '-' | first | default: 'Present' | capitalize %}
+
+                    {% if startDate != '' %}
+                      <span class="timeline-card-date">
+                        <i class="fa-regular fa-calendar"></i> {{ startDate }} &ndash; {{ endDate }}
+                      </span>
+                    {% endif %}
+
+                    {% if entry.location %}
+                      <span class="timeline-card-location">
+                        <i class="fa-solid fa-location-dot"></i> {{ entry.location }}
+                      </span>
+                    {% endif %}
+                  </div>
+
+                  {% if entry.summary and entry.summary != '' %}
+                    <div class="timeline-card-summary">
+                      {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+                    </div>
+                  {% endif %}
+
+                  {% if entry.highlights %}
+                    <ul class="timeline-card-highlights">
+                      {% for item in entry.highlights %}
+                        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% comment %} ─── Education Section ─── {% endcomment %}
+      {% assign education = cv.sections.Education | default: empty_array %}
+
+      {% if education.size > 0 %}
+        <section class="experience-section">
+          <h2 class="experience-section-title education-title">
+            <i class="fa-solid fa-graduation-cap"></i> Education
+          </h2>
+          <div class="timeline-container timeline-education">
+            {% for entry in education %}
+              <div class="timeline-entry">
+                <div class="timeline-marker">
+                  <div class="marker-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                </div>
+                <div class="timeline-card">
+                  {% assign study_type = entry.studyType | default: entry.degree %}
+                  {% capture title_text %}{{ study_type }}{% if entry.area %} in {{ entry.area }}{% endif %}{% if entry.ongoing %} (Ongoing){% endif %}{% endcapture %}
+
+                  <div class="timeline-card-header">
+                    {% if entry.logo %}
+                      <img class="timeline-card-logo" src="{{ entry.logo | relative_url }}" alt="{{ entry.institution }} logo">
+                    {% endif %}
+                    <div class="timeline-card-header-text">
+                      {% if title_text != blank %}
+                        {% if entry.url %}
+                          <div class="timeline-card-title">
+                            <a href="{{ entry.url }}">{{ title_text }}</a>
+                          </div>
+                        {% else %}
+                          <div class="timeline-card-title">{{ title_text }}</div>
+                        {% endif %}
+                      {% endif %}
+                      {% if entry.institution %}
+                        <div class="timeline-card-subtitle">{{ entry.institution }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  <div class="timeline-card-meta">
+                    {% assign raw_start = entry.start_date | default: entry.startDate %}
+                    {% assign raw_end = entry.end_date | default: entry.endDate %}
+                    {% assign startDate = raw_start | split: '-' | first %}
+                    {% assign endDate = raw_end | split: '-' | first %}
+
+                    {% if startDate and endDate %}
+                      {% assign date_str = startDate | append: ' &ndash; ' | append: endDate %}
+                    {% elsif endDate %}
+                      {% assign date_str = endDate %}
+                    {% elsif startDate %}
+                      {% assign date_str = startDate %}
+                    {% else %}
+                      {% assign date_str = nil %}
+                    {% endif %}
+
+                    {% if date_str %}
+                      <span class="timeline-card-date">
+                        <i class="fa-regular fa-calendar"></i> {{ date_str }}
+                      </span>
+                    {% endif %}
+
+                    {% if entry.location %}
+                      <span class="timeline-card-location">
+                        <i class="fa-solid fa-location-dot"></i> {{ entry.location }}
+                      </span>
+                    {% endif %}
+                  </div>
+
+                  {% if entry.courses or entry.highlights %}
+                    <ul class="timeline-card-highlights">
+                      {% for item in entry.courses %}
+                        <li>{{ item }}</li>
+                      {% endfor %}
+                      {% for item in entry.highlights %}
+                        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% comment %} ─── Skills Section ─── {% endcomment %}
+      {% assign skills = cv.sections.Skills | default: empty_array %}
+
+      {% if skills.size > 0 %}
+        <section class="experience-section">
+          <h2 class="experience-section-title">
+            <i class="fa-solid fa-wrench"></i> Skills
+          </h2>
+          <div class="skills-grid">
+            {% for entry in skills %}
+              <div class="skill-card">
+                <div class="skill-card-header">
+                  {% if entry.icon %}
+                    <i class="{{ entry.icon }}"></i>
+                  {% endif %}
+                  <span class="skill-name">{{ entry.name }}</span>
+                  {% if entry.level %}
+                    <span class="skill-level">{{ entry.level }}</span>
+                  {% endif %}
+                </div>
+                {% if entry.keywords %}
+                  <div class="skill-keywords">
+                    {% for keyword in entry.keywords %}
+                      <span class="skill-tag">{{ keyword }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% comment %} ─── Awards Section (if present) ─── {% endcomment %}
+      {% assign awards = cv.sections.Awards | default: cv.sections['Honors and Awards'] | default: empty_array %}
+
+      {% if awards.size > 0 %}
+        <section class="experience-section">
+          <h2 class="experience-section-title">
+            <i class="fa-solid fa-award"></i> Awards
+          </h2>
+          <div class="timeline-container">
+            {% for entry in awards %}
+              <div class="timeline-entry">
+                <div class="timeline-marker">
+                  <div class="marker-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                </div>
+                <div class="timeline-card">
+                  <div class="timeline-card-title">{{ entry.title | default: entry.name }}</div>
+                  {% if entry.awarder or entry.issuer %}
+                    <div class="timeline-card-subtitle">{{ entry.awarder | default: entry.issuer }}</div>
+                  {% endif %}
+                  {% if entry.date %}
+                    <div class="timeline-card-meta">
+                      <span class="timeline-card-date">
+                        <i class="fa-regular fa-calendar"></i> {{ entry.date }}
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if entry.summary %}
+                    <div class="timeline-card-summary">
+                      {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+    </div>
+  </article>
+</div>

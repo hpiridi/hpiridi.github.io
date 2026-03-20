@@ -1,0 +1,477 @@
+/*****************************
+ * Experience Timeline styles
+ * Vertical timeline with gradient line, glowing markers, and hover cards
+ * Inspired by Hugo Blox resume-experience layout
+ *****************************/
+
+// ─── Section Layout ───────────────────────────
+
+.experience-page {
+  width: 100%;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+    color: var(--global-text-color-light);
+  }
+
+  .header-actions {
+    margin-top: 0.75rem;
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid var(--global-theme-color);
+      padding: 0.3rem 1rem;
+      border-radius: 0.25rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: var(--global-theme-color);
+        color: var(--global-bg-color);
+      }
+    }
+  }
+}
+
+.experience-section {
+  margin-bottom: 3.5rem;
+}
+
+.experience-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--global-text-color);
+
+  i {
+    color: var(--global-theme-color);
+    font-size: 1.3rem;
+  }
+}
+
+.experience-section-title.education-title i {
+  color: var(--global-hover-color, #00ab37);
+}
+
+// ─── Contact Card ────────────────────────────
+
+.contact-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.125));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.contact-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin-bottom: 0.15rem;
+}
+
+.contact-label {
+  font-size: 1rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+
+  i {
+    color: var(--global-theme-color);
+    font-size: 0.85rem;
+  }
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+
+// ─── Summary Card ────────────────────────────
+
+.summary-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.125));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--global-text-color);
+  text-align: justify;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// ─── Timeline Container ──────────────────────
+
+.timeline-container {
+  position: relative;
+  padding-left: 3rem;
+}
+
+// Vertical gradient line
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--global-theme-color), transparent);
+  border-radius: 1px;
+}
+
+.timeline-container.timeline-education::before {
+  background: linear-gradient(to bottom, var(--global-hover-color, #00ab37), transparent);
+}
+
+// ─── Timeline Entry ──────────────────────────
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 1.75rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ─── Dot Marker with Glow ────────────────────
+
+.timeline-marker {
+  position: absolute;
+  left: -3rem;
+  top: 0.25rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  // Glow layer
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+    opacity: 0.25;
+    filter: blur(6px);
+    transition: opacity 0.3s ease;
+  }
+
+  .marker-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    i {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// Education marker color
+.timeline-education .timeline-marker {
+  &::before {
+    background: var(--global-hover-color, #00ab37);
+  }
+
+  .marker-icon {
+    background: var(--global-hover-color, #00ab37);
+  }
+}
+
+// Intensify glow on hover
+.timeline-entry:hover .timeline-marker::before {
+  opacity: 0.45;
+}
+
+// ─── Content Card ────────────────────────────
+
+.timeline-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.125));
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  .timeline-entry:hover & {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.timeline-education .timeline-entry:hover .timeline-card {
+  border-color: var(--global-hover-color, #00ab37);
+}
+
+// ─── Card Header with Logo ───────────────────
+
+.timeline-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-card-logo {
+  height: 28px;
+  max-width: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.timeline-card-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  color: var(--global-text-color);
+}
+
+.timeline-card-subtitle {
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-card-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+
+  i {
+    color: var(--global-theme-color);
+    font-size: 0.75rem;
+  }
+}
+
+.timeline-education .timeline-card-date i {
+  color: var(--global-hover-color, #00ab37);
+}
+
+.timeline-card-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+
+  i {
+    color: var(--global-theme-color);
+    font-size: 0.75rem;
+  }
+}
+
+.timeline-card-summary {
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  margin-bottom: 0.4rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.timeline-card-highlights {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+
+  li {
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    margin-bottom: 0.25rem;
+    line-height: 1.55;
+
+    &::marker {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.timeline-education .timeline-card-highlights li::marker {
+  color: var(--global-hover-color, #00ab37);
+}
+
+// ─── Skills Grid ─────────────────────────────
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.125));
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+
+  i {
+    font-size: 1.2rem;
+    color: var(--global-theme-color);
+  }
+
+  .skill-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--global-text-color);
+  }
+
+  .skill-level {
+    font-size: 0.7rem;
+    color: var(--global-text-color-light);
+    margin-left: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.125));
+    border-radius: 0.25rem;
+  }
+}
+
+.skill-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  .skill-tag {
+    font-size: 0.78rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 1rem;
+    background: var(--global-code-bg-color, rgba(0, 0, 0, 0.04));
+    color: var(--global-text-color);
+    border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.125));
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// ─── Responsive ──────────────────────────────
+
+@media (max-width: 576px) {
+  .timeline-container {
+    padding-left: 2.5rem;
+  }
+
+  .timeline-marker {
+    left: -2.5rem;
+    width: 26px;
+    height: 26px;
+
+    .marker-icon {
+      width: 26px;
+      height: 26px;
+
+      i {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .timeline-container::before {
+    left: 12px;
+  }
+
+  .timeline-card {
+    padding: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
