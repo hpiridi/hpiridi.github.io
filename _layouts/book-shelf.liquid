@@ -1,22 +1,26 @@
 ---
 layout: page
 ---
+<style>
+  blockquote p {
+    text-align: justify;
+  }
+</style>
 {{ content }}
 
 {% if page.collection and page.collection.size > 0 %}
-  {% assign collection = site[page.collection] %}
+  {% assign collection = site[page.collection] | sort: 'section_order' %}
   {% if collection and collection.size > 0 %}
-    {% for item in collection reversed %}
-      {% assign current_year = item.started | date: '%Y' %}
-      {% if current_year != year %}
+    {% assign current_section = nil %}
+    {% for item in collection %}
+      {% assign item_section = item.section | default: 'Other' %}
+      {% if item_section != current_section %}
         {% unless forloop.first %}
           </ul>
         {% endunless %}
-        <h1 id="y{{item.started | date: "%Y"}}">
-          <a href="{{ current_year | prepend: '/books/' | relative_url }}">{{ current_year }}</a>
-        </h1>
+        <h2 id="{{ item_section | slugify }}">{{ item_section }}</h2>
         <ul>
-          {% assign year = current_year %}
+        {% assign current_section = item_section %}
       {% endif %}
 
       <figure class="cover">

@@ -4,7 +4,7 @@ permalink: /patents/
 title: patents
 description: Granted and pending patents.
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 <!-- _pages/patents.md -->
