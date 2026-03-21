@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-cv",
+          title: "CV",
+          description: "Career timeline, education, and technical skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-publications",
           title: "publications",
           description: "publications by categories in reversed chronological order.",
           section: "Navigation",
@@ -23,12 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/patents/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Career timeline, education, and technical skills.",
+        },{id: "nav-bookshelf",
+          title: "bookshelf",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/books/";
           },
         },{id: "post-welcome-to-my-blog",
         
@@ -41,11 +48,106 @@ ninja.data = [{
             window.location.href = "/blog/2026/welcome/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
+      },{id: "books-ai-engineering-building-applications-with-foundation-models",
+          title: 'AI Engineering: Building Applications with Foundation Models',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
+              window.location.href = "/books/ai_engineering/";
+            },},{id: "books-approaching-almost-any-machine-learning-problem",
+          title: 'Approaching (Almost) Any Machine Learning Problem',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/approaching_almost_any_ml_problem/";
+            },},{id: "books-artificial-intelligence-a-modern-approach",
+          title: 'Artificial Intelligence: A Modern Approach',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/artificial_intelligence_modern_approach/";
+            },},{id: "books-build-a-large-language-model-from-scratch",
+          title: 'Build a Large Language Model (From Scratch)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/build_large_language_model_from_scratch/";
+            },},{id: "books-building-llms-for-production",
+          title: 'Building LLMs for Production',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/building_llms_for_production/";
+            },},{id: "books-deep-learning",
+          title: 'Deep Learning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/deep_learning/";
+            },},{id: "books-deep-learning-on-graphs",
+          title: 'Deep Learning on Graphs',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/deep_learning_on_graphs/";
+            },},{id: "books-designing-machine-learning-systems",
+          title: 'Designing Machine Learning Systems',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/designing_machine_learning_systems/";
+            },},{id: "books-graph-neural-networks-foundations-frontiers-and-applications",
+          title: 'Graph Neural Networks: Foundations, Frontiers, and Applications',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/gnn_foundations_frontiers_applications/";
+            },},{id: "books-graph-neural-networks-in-action",
+          title: 'Graph Neural Networks in Action',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/graph_neural_networks_in_action/";
+            },},{id: "books-graph-representation-learning",
+          title: 'Graph Representation Learning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/graph_representation_learning/";
+            },},{id: "books-hands-on-large-language-models",
+          title: 'Hands-On Large Language Models',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/hands_on_large_language_models/";
+            },},{id: "books-an-introduction-to-statistical-learning",
+          title: 'An Introduction to Statistical Learning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/introduction_to_statistical_learning/";
+            },},{id: "books-llm-engineer-39-s-handbook",
+          title: 'LLM Engineer&amp;#39;s Handbook',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/llm_engineers_handbook/";
+            },},{id: "books-mathematics-for-machine-learning",
+          title: 'Mathematics for Machine Learning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/mathematics_for_machine_learning/";
+            },},{id: "books-pattern-recognition-and-machine-learning",
+          title: 'Pattern Recognition and Machine Learning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/pattern_recognition_machine_learning/";
+            },},{id: "books-reinforcement-learning-an-introduction",
+          title: 'Reinforcement Learning: An Introduction',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/reinforcement_learning_introduction/";
+            },},{id: "books-atlas-shrugged",
+          title: 'Atlas Shrugged',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/atlas_shrugged/";
+            },},{id: "books-the-da-vinci-code",
+          title: 'The Da Vinci Code',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_da_vinci_code/";
+            },},{id: "books-the-fountainhead",
+          title: 'The Fountainhead',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_fountainhead/";
             },},{id: "news-welcome-to-my-personal-website-more-updates-coming-soon",
           title: 'Welcome to my personal website! More updates coming soon.',
           description: "",
