@@ -2,11 +2,164 @@
 layout: page
 ---
 <style>
-  blockquote p {
+  /* Quote styling */
+  .bookshelf-quote blockquote {
+    border-left: 4px solid var(--global-theme-color);
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0 2rem 0;
+    background: var(--global-code-bg-color);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .bookshelf-quote blockquote p {
     text-align: justify;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .bookshelf-quote blockquote p:last-child {
+    font-style: normal;
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    opacity: 0.8;
+  }
+
+  /* Section headings */
+  .bookshelf-section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--global-theme-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bookshelf-section-title .section-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Book grid */
+  .bookshelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  /* Book card */
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+  }
+
+  .book-card:hover {
+    transform: translateY(-4px);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .book-cover-wrapper {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s ease;
+    background: var(--global-code-bg-color);
+  }
+
+  .book-card:hover .book-cover-wrapper {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .book-cover-wrapper img {
+    display: block;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  /* Status badge */
+  .book-status {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 0;
+    text-align: center;
+    color: #23212d;
+  }
+
+  .book-status.finished { background-color: rgba(98, 196, 98, 0.9); }
+  .book-status.interested { background-color: rgba(118, 145, 219, 0.9); }
+  .book-status.reading { background-color: rgba(248, 148, 6, 0.9); }
+  .book-status.abandoned { background-color: rgba(238, 95, 91, 0.9); }
+  .book-status.paused { background-color: rgba(189, 172, 126, 0.9); }
+  .book-status.queued { background-color: rgba(158, 118, 181, 0.9); }
+  .book-status.reread { background-color: rgba(166, 81, 125, 0.9); }
+  .book-status.uncategorized { background-color: rgba(176, 171, 179, 0.9); }
+
+  /* Book title */
+  .book-title {
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.3;
+    font-weight: 500;
+    max-width: 140px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .book-author {
+    font-size: 0.68rem;
+    opacity: 0.6;
+    margin-top: 0.15rem;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Subtitle */
+  .bookshelf-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+
+  /* Book count badge */
+  .section-count {
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--global-theme-color);
+    color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    opacity: 0.8;
   }
 </style>
-{{ content }}
+
+<div class="bookshelf-quote">
+  {{ content }}
+</div>
 
 {% if page.collection and page.collection.size > 0 %}
   {% assign collection = site[page.collection] | sort: 'section_order' %}
@@ -16,37 +169,51 @@ layout: page
       {% assign item_section = item.section | default: 'Other' %}
       {% if item_section != current_section %}
         {% unless forloop.first %}
-          </ul>
+          </div>
         {% endunless %}
-        <h2 id="{{ item_section | slugify }}">{{ item_section }}</h2>
-        <ul>
+
+        {% comment %} Count books in this section {% endcomment %}
+        {% assign section_count = 0 %}
+        {% for book in collection %}
+          {% assign book_section = book.section | default: 'Other' %}
+          {% if book_section == item_section %}
+            {% assign section_count = section_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        <div class="bookshelf-section-title" id="{{ item_section | slugify }}">
+          {{ item_section }}
+          <span class="section-count">{{ section_count }}</span>
+        </div>
+        <div class="bookshelf-grid">
         {% assign current_section = item_section %}
       {% endif %}
 
-      <figure class="cover">
-        <a class="cover-link" href="{{ item.url | relative_url }}">
+      <a class="book-card" href="{{ item.url | relative_url }}">
+        <div class="book-cover-wrapper">
           {% if item.cover %}
-            <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}" style="height:200px">
+            <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}">
           {% elsif item.olid %}
-            <img alt="{{ item.title }} cover" src="https://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false" style="height:200px">
+            <img alt="{{ item.title }} cover" src="https://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false">
           {% elsif item.isbn %}
-            <img alt="{{ item.title }} cover" src="https://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false" style="height:200px">
+            <img alt="{{ item.title }} cover" src="https://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false">
           {% endif %}
           {% if item.status %}
             {% assign statuses = 'abandoned,finished,interested,paused,queued,reading,reread' | split: ',' %}
             {% assign status = item.status | downcase | strip %}
             {% if statuses contains status %}
-              <figcaption class="{{ status | downcase }}">{{ status | upcase }}</figcaption>
+              <span class="book-status {{ status }}">{{ status }}</span>
             {% else %}
-              <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
+              <span class="book-status uncategorized">uncategorized</span>
             {% endif %}
-          {% else %}
-            <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
           {% endif %}
-        </a>
-      </figure>
+        </div>
+        <div class="book-title">{{ item.title }}</div>
+        <div class="book-author">{{ item.author | split: ',' | first }}</div>
+      </a>
+
       {% if forloop.last %}
-        </ul>
+        </div>
       {% endif %}
     {% endfor %}
   {% endif %}
