@@ -16,4 +16,4 @@ stars: 5
 status: Interested
 ---
 
-Enhancing LLM abilities and reliability with prompting, fine-tuning, and RAG. A practical guide to building production-ready LLM applications.
+Bouchard and Peters focus on the practical reality of making LLMs reliable — prompt engineering patterns, RAG architectures, and fine-tuning strategies that actually work in production. A refreshingly honest take on what it takes to ship LLM features.

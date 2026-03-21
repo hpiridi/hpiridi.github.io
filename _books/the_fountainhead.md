@@ -16,3 +16,5 @@ released: 1943
 stars: 5
 status: Finished
 ---
+
+Howard Roark's uncompromising integrity stayed with me long after I finished this book. Rand's vision of individualism and creative independence is polarizing, but it forced me to think deeply about conviction, compromise, and what it means to do meaningful work.

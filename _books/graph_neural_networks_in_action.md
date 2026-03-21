@@ -17,4 +17,4 @@ stars: 5
 status: Interested
 ---
 
-A practical, project-focused book that teaches how to build and deploy GNNs for recommendation systems and molecular modeling using libraries like PyTorch Geometric and DGL.
+If you want to stop reading about GNNs and start building with them, this is the book. The projects on recommendation systems and molecular modeling using PyTorch Geometric are exactly the kind of hands-on practice that cements understanding.

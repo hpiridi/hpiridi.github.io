@@ -16,3 +16,5 @@ released: 2003
 stars: 5
 status: Finished
 ---
+
+Dan Brown hooks you from the first page and doesn't let go. The puzzles, the pacing, and the way he weaves art history into a thriller made this an unforgettable read — I finished it in two sittings.

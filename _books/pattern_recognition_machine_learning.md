@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-A mathematically rigorous approach to machine learning with the necessary Bayesian and probabilistic perspective required for graduate-level study. Essential reading for anyone seeking deep understanding of the theoretical foundations.
+Bishop's treatment of Bayesian inference fundamentally changed how I think about uncertainty in ML. The chapters on graphical models and expectation-maximization are dense but rewarding — this is the book that separates surface-level understanding from real depth.

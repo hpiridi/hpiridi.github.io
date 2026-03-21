@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-The definitive textbook for classical AI, search algorithms, and computational logic. This 4th edition forms the bedrock for understanding artificial intelligence from first principles through modern approaches.
+No other book gives you as complete a map of the AI landscape — from search and constraint satisfaction to probabilistic reasoning and game theory. Reading AIMA gave me the vocabulary and mental models to reason about any AI system I encounter.

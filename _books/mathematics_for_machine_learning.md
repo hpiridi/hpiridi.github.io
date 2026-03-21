@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-Directly addresses the heavy linear algebra, vector calculus, and analytic geometry required for the first-semester math foundation course. An essential reference for understanding the mathematical underpinnings of modern machine learning algorithms.
+This book finally made linear algebra and multivariate calculus click in the context of ML. If you've ever wondered why eigendecomposition matters for PCA or how gradients actually flow through a model, this is where it all comes together. I keep coming back to it as a reference.

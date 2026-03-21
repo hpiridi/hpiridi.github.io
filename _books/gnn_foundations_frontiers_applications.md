@@ -17,4 +17,4 @@ stars: 5
 status: Reading
 ---
 
-A comprehensive book covering the full lifecycle of GNNs, from foundational models to current frontiers in research and industrial applications.
+This multi-author volume is like having a survey of the entire GNN landscape in one place. The chapters on industrial applications — fraud detection, drug discovery, traffic forecasting — show where GNNs are making real impact beyond academia.

@@ -17,4 +17,4 @@ stars: 5
 status: Interested
 ---
 
-A practical guide to language understanding and generation with LLMs. Covers transformer architectures, embeddings, text generation, and building applications with hands-on examples.
+Alammar's gift for visual explanation shines here. The way this book breaks down embeddings, attention, and text generation with clear diagrams makes complex concepts immediately graspable. Perfect for building strong intuition before diving into implementation.

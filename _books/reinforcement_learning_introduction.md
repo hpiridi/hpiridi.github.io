@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-The ultimate authority on reinforcement learning. This second edition guides you through Markov decision processes, Q-learning, and policy gradient methods — the foundational concepts for modern RL research and applications.
+Sutton and Barto build your intuition from multi-armed bandits all the way to policy gradients with remarkable clarity. This book made temporal difference learning and Bellman equations intuitive for me — it's the kind of book where every chapter unlocks the next.

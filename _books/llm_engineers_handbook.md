@@ -17,4 +17,4 @@ stars: 5
 status: Interested
 ---
 
-Master the art of engineering large language models from concept to production. Covers the full LLM development lifecycle including data pipelines, training, evaluation, and deployment strategies.
+Iusztin and Labonne bridge the gap between understanding LLMs and actually shipping them. The coverage of data pipelines, evaluation frameworks, and deployment patterns is exactly what's missing from most LLM resources. A must-read for anyone building LLM-powered products.

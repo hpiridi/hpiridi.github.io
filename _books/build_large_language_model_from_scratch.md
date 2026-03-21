@@ -17,4 +17,4 @@ stars: 5
 status: Reading
 ---
 
-A hands-on guide to understanding LLMs by building one from the ground up. Covers tokenization, attention mechanisms, pretraining, and fine-tuning with clear PyTorch implementations throughout.
+Raschka demystifies LLMs by having you build one piece by piece in PyTorch. Implementing attention, tokenization, and pretraining yourself gives you an intuition that no amount of reading papers can match. The best way to truly understand transformers.

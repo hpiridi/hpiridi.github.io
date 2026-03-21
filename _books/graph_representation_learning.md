@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-A concise yet comprehensive introduction covering GNN theory, graph embeddings, and generative models. Available online for free — the go-to starting point for graph representation learning.
+Hamilton packs an incredible amount of insight into a concise book. It gave me a solid foundation in node embeddings, message passing, and graph generation that made reading GNN papers dramatically easier. The fact that it's freely available online makes it an easy first recommendation.

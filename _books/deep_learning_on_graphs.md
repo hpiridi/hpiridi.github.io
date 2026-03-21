@@ -17,4 +17,4 @@ stars: 5
 status: Interested
 ---
 
-A thorough, structured textbook covering both foundational concepts and advanced topics in graph neural networks. Provides a rigorous introduction to the field from the ground up.
+Ma and Tang deliver the most structured and rigorous treatment of GNNs I've found. The progression from spectral methods to spatial methods is beautifully laid out, and the advanced chapters on scalability and robustness address real challenges you'll face in practice.

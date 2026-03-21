@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-The required reading for deep learning. It covers everything from feedforward networks to optimization and regularization, providing both the theoretical foundations and practical intuitions needed for modern neural network research.
+The "deep learning bible" for good reason. Goodfellow et al. gave me the theoretical grounding to understand why certain architectures work — the chapters on optimization, regularization, and generative models are particularly outstanding. Essential for anyone serious about the field.

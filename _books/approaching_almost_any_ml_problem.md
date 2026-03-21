@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-A practical, competition-tested guide to tackling ML problems from a Kaggle Grandmaster. Covers cross-validation strategies, feature engineering, hyperparameter tuning, and approaching various problem types with battle-tested recipes.
+Abhishek distills years of Kaggle Grandmaster experience into actionable recipes. This book taught me proper cross-validation strategies and feature engineering patterns that I still use in production. It's the most practical ML book on my shelf.

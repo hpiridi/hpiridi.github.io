@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-The perfect companion for mastering the statistical inference, probability, and hypothesis testing covered early in a data science program. This Python edition provides hands-on applications alongside rigorous statistical foundations.
+ISLR strikes the rare balance between rigor and accessibility. It taught me to think about the bias-variance tradeoff, model selection, and resampling in ways that shaped how I approach every ML problem. The Python edition with runnable code makes it even more indispensable.

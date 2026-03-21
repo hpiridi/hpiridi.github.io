@@ -16,3 +16,5 @@ released: 1957
 stars: 5
 status: Finished
 ---
+
+A sprawling, ambitious novel that challenges you to think about the role of the individual in society. Love it or hate it, Rand's thought experiment on what happens when the creators stop creating is impossible to ignore. The Galt's Gulch chapters alone are worth the 1,000+ pages.

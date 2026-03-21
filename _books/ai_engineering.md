@@ -17,4 +17,4 @@ stars: 5
 status: Finished
 ---
 
-A practical guide to building production applications with foundation models. Covers prompt engineering, RAG, fine-tuning, evaluation, and the emerging best practices for AI-powered systems.
+Chip Huyen captures the rapidly evolving best practices for building with foundation models. Her frameworks for evaluation, prompt engineering, and RAG are born from real-world experience — this book saved me from many pitfalls I would have hit on my own.
