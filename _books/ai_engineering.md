@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2025
 stars: 5
 status: Finished
+description: "Chip Huyen's guide to building with foundation models — real-world frameworks for evaluation, prompt engineering, and RAG from hard-won experience."
 ---
 
 Chip Huyen captures the rapidly evolving best practices for building with foundation models. Her frameworks for evaluation, prompt engineering, and RAG are born from real-world experience — this book saved me from many pitfalls I would have hit on my own.

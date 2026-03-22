@@ -14,6 +14,7 @@ started: 2026-03-20
 released: 2024
 stars: 5
 status: Interested
+description: "A hands-on guide to making LLMs reliable in production — prompt engineering patterns, RAG architectures, and fine-tuning strategies that work."
 ---
 
 Bouchard and Peters focus on the practical reality of making LLMs reliable — prompt engineering patterns, RAG architectures, and fine-tuning strategies that actually work in production. A refreshingly honest take on what it takes to ship LLM features.

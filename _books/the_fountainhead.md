@@ -15,6 +15,7 @@ started: 2026-03-21
 released: 1943
 stars: 5
 status: Finished
+description: "Ayn Rand's novel of uncompromising individualism — a polarizing, thought-provoking exploration of creative integrity and the courage of conviction."
 ---
 
 Howard Roark's uncompromising integrity stayed with me long after I finished this book. Rand's vision of individualism and creative independence is polarizing, but it forced me to think deeply about conviction, compromise, and what it means to do meaningful work.

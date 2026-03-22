@@ -1,8 +1,10 @@
 ---
 layout: page
 permalink: /patents/
-title: patents
-description: Granted and pending patents.
+title: Patents
+description: >
+  Granted and pending US patents by Hari Prasad Piridi in machine learning, data science,
+  and cloud computing systems.
 nav: true
 nav_order: 3
 ---

@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2025
 stars: 5
 status: Interested
+description: "Hands-on GNN projects with PyTorch Geometric — build recommendation systems and molecular models to cement your graph learning understanding."
 ---
 
 If you want to stop reading about GNNs and start building with them, this is the book. The projects on recommendation systems and molecular modeling using PyTorch Geometric are exactly the kind of hands-on practice that cements understanding.

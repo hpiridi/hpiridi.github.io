@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Courses, workshops, and mentoring.
+title: Teaching
+description: Courses, workshops, and mentoring activities by Hari Prasad Piridi in data science and machine learning.
 nav: false
 nav_order: 5
 ---

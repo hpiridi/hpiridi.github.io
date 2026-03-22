@@ -60,11 +60,13 @@
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="{% if page.og_image or site.og_image %}summary_large_image{% else %}summary{% endif %}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
@@ -226,22 +228,60 @@
     {% endcase %}
   {% endfor %}
 
+  {% if page.url == '/' %}
   <script type="application/ld+json">
     {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "{{ author_name }}",
+            "url": "{{ site.url }}{{ site.baseurl }}/",
+            "jobTitle": "Director, Data Science",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Walmart Global Tech"
+            },
+            "alumniOf": [
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "BITS Pilani"
+                }
+            ],
+            "knowsAbout": ["Data Science", "Machine Learning", "Graph Neural Networks", "Large Language Models", "Recommender Systems", "Causal Inference", "Knowledge Graphs"],
+            {% if sameaslinks != blank %}
+            "sameAs": {{ sameaslinks | jsonify }},
+            {% endif %}
+            "image": "{{ site.url }}{{ site.baseurl }}/assets/img/prof_pic.jpg"
+        },
+        "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
         "author":
         {
             "@type": "Person",
-            "name": "{{ author_name }}"
+            "name": "{{ author_name }}",
+            "url": "{{ site.url }}{{ site.baseurl }}/"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
         "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
         "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        {% if is_blog_post %}
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        {% if page.last_modified_at %}
+        "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+        {% endif %}
+        {% endif %}
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        "name": "{{ author_name }}"
     }
   </script>
+  {% endif %}
 {% endif %}

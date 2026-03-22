@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2022
 stars: 5
 status: Reading
+description: "A comprehensive multi-author survey of the GNN landscape — from theoretical foundations to industrial applications in fraud detection and drug discovery."
 ---
 
 This multi-author volume is like having a survey of the entire GNN landscape in one place. The chapters on industrial applications — fraud detection, drug discovery, traffic forecasting — show where GNNs are making real impact beyond academia.

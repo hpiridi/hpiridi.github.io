@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2024
 stars: 5
 status: Interested
+description: "A practical guide to shipping LLMs — covers data pipelines, evaluation frameworks, and deployment patterns for building LLM-powered products."
 ---
 
 Iusztin and Labonne bridge the gap between understanding LLMs and actually shipping them. The coverage of data pipelines, evaluation frameworks, and deployment patterns is exactly what's missing from most LLM resources. A must-read for anyone building LLM-powered products.

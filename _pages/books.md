@@ -1,7 +1,10 @@
 ---
 layout: book-shelf
-title: bookshelf
+title: Bookshelf
 permalink: /books/
+description: >
+  Curated reading list of books on machine learning, deep learning, graph neural networks, LLMs, and fiction
+  recommended by Hari Prasad Piridi.
 nav: true
 nav_order: 4
 collection: books

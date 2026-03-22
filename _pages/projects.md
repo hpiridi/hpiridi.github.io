@@ -1,8 +1,8 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A collection of research and industry projects.
+description: Research and industry projects by Hari Prasad Piridi in machine learning, graph neural networks, and applied AI.
 nav: false
 nav_order: 3
 display_categories: [industry, research]

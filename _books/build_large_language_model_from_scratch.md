@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2024
 stars: 5
 status: Reading
+description: "Build a working LLM step by step in PyTorch — Raschka walks you through attention, tokenization, and pretraining to truly understand transformers."
 ---
 
 Raschka demystifies LLMs by having you build one piece by piece in PyTorch. Implementing attention, tokenization, and pretraining yourself gives you an intuition that no amount of reading papers can match. The best way to truly understand transformers.

@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2021
 stars: 5
 status: Interested
+description: "A rigorous treatment of GNNs from spectral to spatial methods, with advanced coverage of scalability and robustness for real-world graph problems."
 ---
 
 Ma and Tang deliver the most structured and rigorous treatment of GNNs I've found. The progression from spectral methods to spatial methods is beautifully laid out, and the advanced chapters on scalability and robustness address real challenges you'll face in practice.

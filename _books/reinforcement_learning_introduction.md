@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2018
 stars: 5
 status: Finished
+description: "Sutton and Barto's classic on RL — builds intuition from multi-armed bandits to policy gradients with remarkable clarity and progressive depth."
 ---
 
 Sutton and Barto build your intuition from multi-armed bandits all the way to policy gradients with remarkable clarity. This book made temporal difference learning and Bellman equations intuitive for me — it's the kind of book where every chapter unlocks the next.

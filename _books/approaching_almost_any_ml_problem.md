@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2020
 stars: 5
 status: Finished
+description: "Actionable ML recipes from a Kaggle Grandmaster — cross-validation strategies, feature engineering patterns, and practical techniques for real problems."
 ---
 
 Abhishek distills years of Kaggle Grandmaster experience into actionable recipes. This book taught me proper cross-validation strategies and feature engineering patterns that I still use in production. It's the most practical ML book on my shelf.

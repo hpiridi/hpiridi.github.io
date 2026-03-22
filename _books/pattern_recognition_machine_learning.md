@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2006
 stars: 5
 status: Finished
+description: "Bishop's masterwork on Bayesian inference, graphical models, and expectation-maximization — the book that builds real depth in machine learning."
 ---
 
 Bishop's treatment of Bayesian inference fundamentally changed how I think about uncertainty in ML. The chapters on graphical models and expectation-maximization are dense but rewarding — this is the book that separates surface-level understanding from real depth.

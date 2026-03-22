@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2023
 stars: 5
 status: Finished
+description: "The gold standard introduction to statistical learning — covers model selection, resampling, and the bias-variance tradeoff with hands-on Python code."
 ---
 
 ISLR strikes the rare balance between rigor and accessibility. It taught me to think about the bias-variance tradeoff, model selection, and resampling in ways that shaped how I approach every ML problem. The Python edition with runnable code makes it even more indispensable.

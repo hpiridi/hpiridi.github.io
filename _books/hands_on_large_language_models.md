@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2024
 stars: 5
 status: Interested
+description: "Alammar and Grootendorst break down embeddings, attention, and text generation with clear visual explanations — ideal for building LLM intuition."
 ---
 
 Alammar's gift for visual explanation shines here. The way this book breaks down embeddings, attention, and text generation with clear diagrams makes complex concepts immediately graspable. Perfect for building strong intuition before diving into implementation.

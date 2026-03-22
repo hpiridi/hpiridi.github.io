@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2022
 stars: 5
 status: Finished
+description: "Essential reading on production ML systems — covers data distribution shifts, feature stores, monitoring, and the full lifecycle beyond model accuracy."
 ---
 
 This book changed how I think about ML systems beyond just model accuracy. Chip's coverage of data distribution shifts, feature stores, and monitoring in production filled critical gaps in my understanding. Every ML engineer deploying to production should read this.

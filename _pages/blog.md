@@ -1,7 +1,10 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
+description: >
+  Thoughts on data science, machine learning, and research by Hari Prasad Piridi — covering GNNs, LLMs,
+  recommender systems, and practical ML engineering.
 nav: false
 nav_order: 4
 pagination:
@@ -179,7 +182,7 @@ pagination:
 </div>
 
   <div class="col-sm-3">
-    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
+    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="{{ post.title }}">
   </div>
 </div>
 {% endif %}

@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2016
 stars: 5
 status: Finished
+description: "The definitive deep learning textbook by Goodfellow, Bengio, and Courville — essential reading on optimization, regularization, and generative models."
 ---
 
 The "deep learning bible" for good reason. Goodfellow et al. gave me the theoretical grounding to understand why certain architectures work — the chapters on optimization, regularization, and generative models are particularly outstanding. Essential for anyone serious about the field.

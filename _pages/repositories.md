@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Repositories
 nav: false
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+description: Open-source GitHub repositories and contributions by Hari Prasad Piridi.
 nav_order: 4
 ---
 

@@ -1,8 +1,11 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Director, Data Science @ <a href='https://tech.walmart.com/content/walmart-global-tech/en_us.html'>Walmart GlobalTech</a> | Research Scholar @ <a href='https://www.bits-pilani.ac.in/'>BITS Pilani</a>
+description: >
+  Hari Prasad Piridi — Director of Data Science at Walmart GlobalTech and Research Scholar at BITS Pilani,
+  specializing in Graph Neural Networks, LLMs, recommender systems, and causal inference.
 
 profile:
   align: right

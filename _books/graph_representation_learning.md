@@ -15,6 +15,7 @@ started: 2026-03-20
 released: 2020
 stars: 5
 status: Finished
+description: "Hamilton's concise, freely available primer on node embeddings, message passing, and graph generation — the ideal first book on GNNs."
 ---
 
 Hamilton packs an incredible amount of insight into a concise book. It gave me a solid foundation in node embeddings, message passing, and graph generation that made reading GNN papers dramatically easier. The fact that it's freely available online makes it an easy first recommendation.
